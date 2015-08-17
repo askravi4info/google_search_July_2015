@@ -29,6 +29,7 @@ Feature: Verify the Flight Search Functionality
       | The start or end date is prior to the current date. | past   |
       | Please complete the highlighted origin field below. | future |
 
+  @manual
   Scenario: verifying the look and feel of Expedia Home page
     Given I am on Expedia Home Page
     Then Verify the look and feel
