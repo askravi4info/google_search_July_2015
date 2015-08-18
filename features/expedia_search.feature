@@ -1,8 +1,10 @@
+@flight_search0045
 Feature: Verify the Flight Search Functionality
 
   Background:
     Given user is on expedia home page
 
+ @smoke
   Scenario:Verify the user gets an error message when searching for past flights
     And user should select the flights tab
     And user selects "Indianapolis, IN (IND-Indianapolis Intl.) near Columbus, IN" airport from departure field
@@ -11,12 +13,14 @@ Feature: Verify the Flight Search Functionality
     And searches for the flights availability
     Then verify the "The start or end date is prior to the current date." error message is displayed
 
+ @wip
   Scenario:Verify the sort order of the search results are by price
     And user enters the required fields
     And user makes a future date flight search
     And searches for the flights availability
     Then verify the search results are displayed by price
 
+  @smoke
   Scenario: testing the yml files
     When I load and read the yml files
 
@@ -29,7 +33,7 @@ Feature: Verify the Flight Search Functionality
       | The start or end date is prior to the current date. | past   |
       | Please complete the highlighted origin field below. | future |
 
-  @manual
+    @manual
   Scenario: verifying the look and feel of Expedia Home page
     Given I am on Expedia Home Page
     Then Verify the look and feel
